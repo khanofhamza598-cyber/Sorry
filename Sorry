@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>I'm Sorry 💙</title>
+<style>
+body{margin:0;font-family:Arial;background:linear-gradient(135deg,#0b3d91,#3b82f6,#7dd3fc);height:100vh;overflow:hidden;display:flex;justify-content:center;align-items:center}
+.card{background:rgba(255,255,255,.15);backdrop-filter:blur(12px);padding:35px;border-radius:20px;max-width:700px;color:#fff;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,.3)}
+h1{font-size:42px}.heart{position:fixed;color:#fff;animation:up 8s linear infinite}
+@keyframes up{from{transform:translateY(100vh)}to{transform:translateY(-10vh)}}
+button{padding:14px 24px;border:none;border-radius:30px;font-size:18px;cursor:pointer;margin:10px}
+#yes{background:#fff;color:#1565c0}
+#no{background:#ef4444;color:#fff;position:fixed}
+#msg{display:none;font-size:22px;margin-top:20px}
+</style></head>
+<body>
+<div class="card">
+<h1>I'm Truly Sorry 💙</h1>
+<p><b>Dear Besfren,</b><br><br>
+I know I made a mistake and I am so so so sorry for that. You are my moti taza billi jo ding dong khati hai, Please maaf krdo. Thank you bestuuuuu 💙</p>
+<button id="yes">💙 Okay I forgive you</button>
+</div>
+<button id="no">🥺 No I don't</button>
+<div id="msg">🥹 YAYYY!! Thank you Bestuuuu 💙<br>I promise I'll do better. 🌸</div>
+<script>
+function heart(){let h=document.createElement("div");h.className="heart";h.innerHTML="💙";h.style.left=Math.random()*100+"vw";h.style.fontSize=(15+Math.random()*25)+"px";document.body.appendChild(h);setTimeout(()=>h.remove(),8000);}
+setInterval(heart,250);
+const no=document.getElementById("no");
+function move(){no.style.left=Math.random()*(window.innerWidth-140)+"px";no.style.top=Math.random()*(window.innerHeight-60)+"px";}
+move();no.addEventListener("mouseenter",move);
+document.getElementById("yes").onclick=()=>{
+document.querySelector(".card").appendChild(document.getElementById("msg"));
+msg.style.display="block";
+for(let i=0;i<150;i++){let c=document.createElement("div");c.textContent=["🎉","💙","✨"][i%3];c.style.position="fixed";c.style.left=Math.random()*100+"vw";c.style.top="-20px";c.style.fontSize="24px";c.style.transition="4s linear";document.body.appendChild(c);setTimeout(()=>{c.style.top="110vh";},10);setTimeout(()=>c.remove(),4200);}
+}
+</script></body></html>
